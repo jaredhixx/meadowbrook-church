@@ -4,14 +4,49 @@ import Link from "next/link";
 import HomeHero from "./components/HomeHero";
 
 export const metadata: Metadata = {
-  title: "Meadowbrook Christian Church | Church in Maryville TN",
+  title: "Meadowbrook Christian Church | Church in Maryville TN Near Alcoa",
   description:
-    "Looking for a church in Maryville TN? Meadowbrook Christian Church is a welcoming, Bible-based church with Sunday services, a friendly community, and a personal atmosphere near Maryville and Alcoa.",
+    "Meadowbrook Christian Church is a small, welcoming church in Maryville TN near Alcoa. Join us for Sunday worship, prayer, and a personal church community rooted in faith, fellowship, and God’s Word.",
 };
 
 export default function Home() {
+    const churchSchema = {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    name: "Meadowbrook Christian Church",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "2332 Grove St",
+      addressLocality: "Maryville",
+      addressRegion: "TN",
+      postalCode: "37804",
+      addressCountry: "US",
+    },
+    url: "https://www.meadowbrookcc.org",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: "10:30",
+        closes: "12:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Thursday",
+        opens: "19:00",
+        closes: "20:30",
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#f2ede3] text-[#1f2937]">
+
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(churchSchema) }}
+      />
+
       <HomeHero />
 
       <section className="relative border-b border-[#d9d2c3] bg-[#f2ede3] -mt-12 pt-6">
@@ -30,9 +65,9 @@ export default function Home() {
 
 <p className="mt-5 max-w-xl text-lg leading-8 text-[#4b5563]">
   Meadowbrook Christian Church is a small church in Maryville, TN
-  where people can be known, welcomed, and encouraged to grow in
-  faith. We want to honor God, strengthen one another, and help
-  people take meaningful steps toward Jesus Christ.
+  near Alcoa where people can be known, welcomed, and encouraged
+  to grow in faith. We want to honor God, strengthen one another,
+  and help people take meaningful steps toward Jesus Christ.
 </p>
 
               <div className="mt-5 rounded-2xl border border-[#e2dccf] bg-white/80 p-5 shadow-sm">
