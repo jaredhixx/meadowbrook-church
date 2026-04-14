@@ -2,18 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Meadowbrook Christian Church",
+  title: "Contact | Meadowbrook Christian Church",
   description:
-    "Contact Meadowbrook Christian Church in Maryville, TN. Find our phone number, address, service time, and ways to reach out with questions or prayer requests.",
+    "Contact Meadowbrook Christian Church in Maryville, Tennessee. Find our phone number, email, address, Sunday service time, and simple ways to ask questions or plan your visit.",
 };
 
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
       <section className="border-b border-[#d9d2c3] bg-gradient-to-b from-[#f7f3eb] to-[#faf7f2]">
-        <div className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-20">
+        <div className="mx-auto max-w-5xl px-6 pt-12 pb-16 md:px-10 md:pt-14 md:pb-20">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
             Contact Meadowbrook
+          </p>
+
+          <p className="mt-4 font-serif text-2xl italic text-[#5c7354] md:text-3xl">
+            Passion for God, a Heart for People.
           </p>
 
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
@@ -26,13 +30,22 @@ export default function ContactPage() {
             Meadowbrook Christian Church is here to help.
           </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-4">
             <div className="rounded-2xl border border-[#d9d2c3] bg-white p-6 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-wide text-[#6b7280]">
                 Phone
               </p>
               <p className="mt-2 text-xl font-semibold text-[#1f2937]">
-                (865) 982-8241
+                (657) 347-2208
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-[#d9d2c3] bg-white p-6 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#6b7280]">
+                Email
+              </p>
+              <p className="mt-2 break-all text-lg font-semibold text-[#1f2937]">
+                2meadowbrookcc@gmail.com
               </p>
             </div>
 
@@ -82,14 +95,30 @@ export default function ContactPage() {
                   Call the church
                 </h3>
                 <p className="mt-3 text-base leading-7 text-[#4b5563]">
-                  The easiest way to reach Meadowbrook Christian Church right now
-                  is by phone.
+                  The simplest way to reach Meadowbrook Christian Church right
+                  now is by phone.
                 </p>
                 <a
-                  href="tel:+18659828241"
+                  href="tel:+16573472208"
                   className="mt-5 inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-5 py-3 text-base font-semibold text-white transition hover:bg-[#4f6448]"
                 >
-                  Call (865) 982-8241
+                  Call (657) 347-2208
+                </a>
+              </div>
+
+              <div className="rounded-2xl border border-[#d9d2c3] bg-[#faf7f2] p-6">
+                <h3 className="text-xl font-semibold text-[#1f2937]">
+                  Email the church
+                </h3>
+                <p className="mt-3 text-base leading-7 text-[#4b5563]">
+                  If email is easier for you, feel free to reach out with
+                  questions, prayer requests, or first-visit questions.
+                </p>
+                <a
+                  href="mailto:2meadowbrookcc@gmail.com"
+                  className="mt-5 inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-5 py-3 text-base font-semibold text-[#1f2937] transition hover:bg-[#f6f1e7]"
+                >
+                  Email 2meadowbrookcc@gmail.com
                 </a>
               </div>
 
@@ -98,8 +127,8 @@ export default function ContactPage() {
                   Need prayer?
                 </h3>
                 <p className="mt-3 text-base leading-7 text-[#4b5563]">
-                  If you have a prayer need, please call the church and let
-                  someone know how Meadowbrook can pray for you.
+                  If you have a prayer need, please call or email the church and
+                  let someone know how Meadowbrook can pray for you.
                 </p>
               </div>
 
@@ -134,8 +163,10 @@ export default function ContactPage() {
 
               <div className="mt-4 space-y-3 text-base leading-7 text-[#4b5563]">
                 <p>2332 Grove St, Maryville, TN 37804</p>
-                <p>(865) 982-8241</p>
+                <p>(657) 347-2208</p>
+                <p>2meadowbrookcc@gmail.com</p>
                 <p>Sunday at 10:30 AM</p>
+                <p>Thursday small group at 7:00 PM</p>
               </div>
 
               <div className="mt-6 flex flex-col gap-4 sm:flex-row">
@@ -197,7 +228,7 @@ export default function ContactPage() {
               </Link>
 
               <a
-                href="tel:+18659828241"
+                href="tel:+16573472208"
                 className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-[#faf7f2] px-6 py-3 text-base font-semibold text-[#1f2937] transition hover:bg-[#f6f1e7]"
               >
                 Call the Church

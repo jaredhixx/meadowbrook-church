@@ -40,7 +40,7 @@ export default function RootLayout({
       postalCode: "37804",
       addressCountry: "US",
     },
-    telephone: "(865) 982-8241",
+    telephone: "(657) 347-2208",
         url: "https://www.meadowbrookcc.org",
     areaServed: [
       {
@@ -114,7 +114,7 @@ export default function RootLayout({
                 Contact
               </h3>
               <p className="mt-4 text-base leading-7 text-[#4b5563]">
-                (865) 982-8241
+                (657) 347-2208
               </p>
             </div>
 

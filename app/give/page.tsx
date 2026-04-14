@@ -93,7 +93,7 @@ export default function GivePage() {
                     Church Phone
                   </p>
                   <p className="mt-2 text-xl font-semibold text-[#1f2937]">
-                    (865) 982-8241
+                    (657) 347-2208
                   </p>
                 </div>
 
