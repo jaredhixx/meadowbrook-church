@@ -34,7 +34,7 @@ const historyPoints = [
 
 export default function BeliefsPage() {
   return (
-    <main className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
+    <div className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
       <section className="border-b border-[#d9d2c3] bg-gradient-to-b from-[#f7f3eb] to-[#faf7f2]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
@@ -124,7 +124,11 @@ export default function BeliefsPage() {
                 Our Mission
               </p>
 
-              <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+              <p className="mt-3 font-serif text-xl italic text-[#5c7354] md:text-2xl">
+                Passion for God, a Heart for People.
+              </p>
+
+              <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
                 Honoring God, strengthening one another, and making disciples
               </h2>
 
@@ -198,6 +202,23 @@ export default function BeliefsPage() {
               </p>
 
               <p>
+                Meadowbrook is an independent, non-denominational church that
+                seeks to follow Jesus Christ and wants to be identified by His
+                name only.
+              </p>
+
+              <p>
+                We are a self-governing community of believers, allowing the
+                Scriptures to be the rule for our faith and practices. We are,
+                however, in fellowship with other congregations locally and
+                nationwide.
+              </p>
+
+              <p>
+                We believe we are Christians only, but not the only Christians.
+              </p>
+
+              <p>
                 Though we’ve been a community of believers for over seventy
                 years, decline in attendance before and after covid left many
                 remaining members hungry for spiritual renewal. But we are
@@ -228,6 +249,6 @@ export default function BeliefsPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

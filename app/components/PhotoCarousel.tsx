@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 type Slide = {
@@ -20,41 +20,97 @@ export default function PhotoCarousel({
   slides,
   aspectClassName = "aspect-[4/3]",
 }: PhotoCarouselProps) {
-  const [mounted, setMounted] = useState(false);
   const [index, setIndex] = useState(0);
+  const intervalRef = useRef<number | null>(null);
+  const touchStartXRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    setMounted(true);
+  const stopAutoPlay = useCallback(() => {
+    if (intervalRef.current !== null) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
   }, []);
 
-  useEffect(() => {
-    if (!mounted || slides.length <= 1) return;
+  const startAutoPlay = useCallback(() => {
+    stopAutoPlay();
 
-    const timer = window.setInterval(() => {
+    if (slides.length <= 1) return;
+
+    intervalRef.current = window.setInterval(() => {
       setIndex((current) => (current + 1) % slides.length);
     }, 5000);
+  }, [slides.length, stopAutoPlay]);
 
-    return () => window.clearInterval(timer);
-  }, [mounted, slides.length]);
+  useEffect(() => {
+    startAutoPlay();
 
-  const prev = () => {
+    return () => {
+      stopAutoPlay();
+    };
+  }, [startAutoPlay, stopAutoPlay]);
+
+  const prev = useCallback(() => {
     setIndex((current) => (current === 0 ? slides.length - 1 : current - 1));
-  };
+  }, [slides.length]);
 
-  const next = () => {
+  const next = useCallback(() => {
     setIndex((current) => (current === slides.length - 1 ? 0 : current + 1));
+  }, [slides.length]);
+
+  const goTo = useCallback((newIndex: number) => {
+    setIndex(newIndex);
+  }, []);
+
+  const handlePrev = () => {
+    prev();
+    startAutoPlay();
   };
 
-  const goTo = (newIndex: number) => {
-    setIndex(newIndex);
+  const handleNext = () => {
+    next();
+    startAutoPlay();
   };
+
+  const handleGoTo = (newIndex: number) => {
+    goTo(newIndex);
+    startAutoPlay();
+  };
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    touchStartXRef.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartXRef.current === null) return;
+
+    const touchEndX = event.changedTouches[0].clientX;
+    const difference = touchStartXRef.current - touchEndX;
+
+    if (Math.abs(difference) > 40) {
+      if (difference > 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+
+    touchStartXRef.current = null;
+  };
+
+  if (slides.length === 0) {
+    return null;
+  }
 
   const currentSlide = slides[index];
 
   return (
     <div className="relative">
       <div className="overflow-hidden rounded-[30px] border border-[#d9d2c3] bg-[#f8f4ec] shadow-[0_24px_60px_rgba(31,41,55,0.12)]">
-        <div className={`relative w-full overflow-hidden ${aspectClassName}`}>
+        <div
+          className={`relative w-full overflow-hidden select-none [touch-action:pan-y] ${aspectClassName}`}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <Image
             key={currentSlide.src}
             src={currentSlide.src}
@@ -85,7 +141,7 @@ export default function PhotoCarousel({
 
           <button
             type="button"
-            onClick={prev}
+            onClick={handlePrev}
             aria-label="Previous photo"
             className="absolute left-2 top-1/2 z-20 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/90 text-base text-[#1f2937] shadow-[0_8px_24px_rgba(15,23,42,0.16)] transition active:scale-95 md:left-3"
           >
@@ -94,7 +150,7 @@ export default function PhotoCarousel({
 
           <button
             type="button"
-            onClick={next}
+            onClick={handleNext}
             aria-label="Next photo"
             className="absolute right-2 top-1/2 z-20 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/90 text-base text-[#1f2937] shadow-[0_8px_24px_rgba(15,23,42,0.16)] transition active:scale-95 md:right-3"
           >
@@ -108,7 +164,7 @@ export default function PhotoCarousel({
               <button
                 key={slide.src}
                 type="button"
-                onClick={() => goTo(slideIndex)}
+                onClick={() => handleGoTo(slideIndex)}
                 aria-label={`Go to slide ${slideIndex + 1}`}
                 className={`rounded-full px-3 py-1.5 text-xs font-semibold transition active:scale-95 ${
                   slideIndex === index

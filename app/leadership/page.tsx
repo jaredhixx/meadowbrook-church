@@ -31,6 +31,38 @@ const featuredLeaders = [
     ],
   },
   {
+    role: "Member Care",
+    name: "Edna Sipe",
+    image: "/images/leadership/edna.jpg",
+    alt: "Edna Sipe at Meadowbrook Christian Church",
+    bio: [
+      "Edna has been part of Meadowbrook Christian Church since 1972. She was married at the church and welcomed her son in 1975.",
+      "Over the years, she has faithfully served by teaching classes and caring for others in the church family.",
+      "She worked at Big Lots for 26 years before retiring in 2013, and since then has been able to spend more time serving and supporting the life of the church.",
+    ],
+  },
+  {
+    role: "Discipleship & Youth Ministry",
+    name: "Travis and Tara Farley",
+    image: "/images/leadership/farley.jpg",
+    alt: "Travis and Tara Farley at Meadowbrook Christian Church",
+    bio: [
+      "Travis has over 30 years of experience with industrial automation. He has been married to Tara for 35 years, and not long after their marriage they served as the youth ministers of Meadowbrook. He enjoys outdoor activities and spending time with family and friends.",
+      "Tara has a bachelor’s degree in Nursing from Tennessee Wesleyan University and a master’s degree as a Family Nurse Practitioner from Tennessee Tech University. She has been a nurse for over 20 years and has been part of Meadowbrook since she was six years old.",
+      "Together, they serve Meadowbrook through discipleship and youth ministry, helping invest in the next generation of the church.",
+    ],
+  },
+  {
+    role: "Children’s Ministry & Administration",
+    name: "Tracy Best",
+    image: "/images/leadership/tracy.jpg",
+    alt: "Tracy Best at Meadowbrook Christian Church",
+    bio: [
+      "Tracy has a bachelor’s degree in Bible & Elementary Education and a M.S. in Technology Education both from Johnson University.",
+      "She taught in the Knox County Schools for 30 years and continues to serve Meadowbrook through children’s ministry and administrative support.",
+    ],
+  },
+  {
     role: "Children’s Ministry Intern",
     name: "Josiah Sealy",
     image: "/images/leadership/josiah.jpg",
@@ -44,29 +76,9 @@ const featuredLeaders = [
   },
 ];
 
-const additionalLeaders = [
-  {
-    role: "Children’s Ministry & Administration",
-    name: "Tracy Best",
-    text:
-      "Tracy has a bachelor’s degree in Bible & Elementary Education and a M.S. in Technology Education both from Johnson University. She taught in the Knox County Schools for 30 years.",
-  },
-  {
-    role: "Discipleship & Youth Ministry",
-    name: "Travis and Tara Farley",
-    text:
-      "Travis and Tara Farley serve in discipleship and youth ministry at Meadowbrook Christian Church.",
-  },
-  {
-    role: "Member Care",
-    name: "Edna Sipe",
-    text: "Edna Sipe serves in member care.",
-  },
-];
-
 export default function LeadershipPage() {
   return (
-    <main className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
+    <div className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
       <section className="border-b border-[#d9d2c3] bg-gradient-to-b from-[#f7f3eb] to-[#faf7f2]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
@@ -105,7 +117,13 @@ export default function LeadershipPage() {
                           alt={leader.alt}
                           fill
                           sizes="(max-width: 1024px) 100vw, 320px"
-                          className="object-cover object-top"
+                          className={`object-cover ${
+                            leader.name === "Tracy Best"
+                              ? "object-[center_25%] scale-190"
+                              : leader.name === "Travis and Tara Farley"
+                                ? "object-center"
+                                : "object-top"
+                          }`}
                         />
                       </div>
                     </div>
@@ -133,41 +151,6 @@ export default function LeadershipPage() {
         </div>
       </section>
 
-      <section className="border-b border-[#d9d2c3] bg-[#f4efe6]">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
-              Additional Leadership
-            </p>
-
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
-              Serving the church in other important roles
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {additionalLeaders.map((leader) => (
-              <div
-                key={leader.name}
-                className="rounded-[24px] border border-[#d9d2c3] bg-white p-6 shadow-sm"
-              >
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
-                  {leader.role}
-                </p>
-
-                <h3 className="mt-3 text-xl font-semibold text-[#1f2937]">
-                  {leader.name}
-                </h3>
-
-                <p className="mt-4 text-sm leading-7 text-[#4b5563]">
-                  {leader.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
           <div className="rounded-[28px] border border-[#d9d2c3] bg-[#faf7f2] p-8 shadow-sm md:p-10">
@@ -182,6 +165,6 @@ export default function LeadershipPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

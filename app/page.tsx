@@ -7,7 +7,7 @@ import PhotoCarousel from "./components/PhotoCarousel";
 export const metadata: Metadata = {
   title: "Meadowbrook Christian Church | Church in Maryville TN Near Alcoa",
   description:
-    "Meadowbrook Christian Church is a small, welcoming church in Maryville TN near Alcoa. Join us for Sunday worship, prayer, and a personal church community rooted in faith, fellowship, and God’s Word.",
+    "Meadowbrook Christian Church is a small, welcoming church in Maryville TN near Alcoa. Join us Sundays at 10:45 AM for Worship & the Word and discover a personal church community rooted in faith, fellowship, and God’s Word.",
 };
 
 const newHereSlides = [
@@ -98,20 +98,20 @@ export default function Home() {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Sunday",
-        opens: "10:30",
+        opens: "10:45",
         closes: "12:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Thursday",
         opens: "19:00",
-        closes: "20:30",
+        closes: "20:00",
       },
     ],
   };
 
   return (
-    <main className="min-h-screen bg-[#f2ede3] text-[#1f2937]">
+    <div className="min-h-screen bg-[#f2ede3] text-[#1f2937]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(churchSchema) }}
@@ -150,13 +150,22 @@ export default function Home() {
                   love.
                 </p>
 
-                <div className="mt-3 grid gap-4 border-t border-[#e7e0d3] pt-4 sm:grid-cols-3">
+                <div className="mt-3 grid gap-4 border-t border-[#e7e0d3] pt-4 sm:grid-cols-2 xl:grid-cols-4">
                   <div>
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
-                      Sunday
+                      Sunday Main Service
                     </p>
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
-                      Worship at 10:30 AM
+                      Worship &amp; the Word at 10:45 AM
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
+                      Optional Sunday
+                    </p>
+                    <p className="mt-2 text-base leading-7 text-[#4b5563]">
+                      10:00–10:30 AM adult prayer meeting and children&apos;s classes
                     </p>
                   </div>
 
@@ -165,7 +174,7 @@ export default function Home() {
                       Thursday
                     </p>
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
-                      Small group at 7:00 PM
+                      Discussion group from 7:00–8:00 PM
                     </p>
                   </div>
 
@@ -178,6 +187,13 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+
+                <p className="mt-4 text-sm leading-7 text-[#4b5563]">
+                  From 10:30–10:45 AM there is relaxed time to arrive, meet
+                  people, and get settled before the main service begins, so
+                  first-time visitors are welcome to come right at 10:45 AM if
+                  that is easiest.
+                </p>
               </div>
             </div>
 
@@ -231,9 +247,9 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 space-y-4 text-base text-[#4b5563]">
-                  <p>• Children are welcome</p>
-                  <p>• Thursday evenings may be especially helpful for questions</p>
-                  <p>• A smaller church makes it easier to begin getting to know people</p>
+                  <p>• Visitors are welcome to come at 10:45 AM for the main service</p>
+                  <p>• 10:30–10:45 AM is a relaxed time to arrive and get settled</p>
+                  <p>• Thursday evenings offer a helpful setting for questions and discussion</p>
                 </div>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -283,8 +299,8 @@ export default function Home() {
 
               <div className="mt-6 space-y-4 text-base text-[#4b5563]">
                 <p>• Children are welcome</p>
-                <p>• Shared meals and church gatherings help people know one another</p>
-                <p>• Thursday evenings create space for discussion and honest questions</p>
+                <p>• Shared meals and monthly potlucks help people know one another</p>
+                <p>• Thursday discussion group creates space for honest questions and conversation</p>
               </div>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -475,6 +491,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

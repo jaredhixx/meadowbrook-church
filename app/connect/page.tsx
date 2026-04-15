@@ -14,7 +14,7 @@ const connectionPaths = [
     title: "Families are welcome at Meadowbrook",
     text: "Our church is blessed with some wonderful, joyful children. Our youth workers are kind and love to mentor these beautiful young souls.",
     points: [
-      "Sunday snacks, songs, and lessons",
+      "Children’s classes on Sunday from 10:00–10:30 AM",
       "Potluck meals",
       "Parent’s Night Out",
       "Game nights",
@@ -26,8 +26,8 @@ const connectionPaths = [
     title: "A good place to begin asking questions",
     text: "If you have just begun your journey toward faith, we would love to get to know you better. Feel free to reach out to any of our leaders if you have questions.",
     points: [
-      "You are welcome to any of our services or events",
-      "Join worship, prayer, and fellowship",
+      "You are welcome to come straight to the 10:45 AM main service",
+      "Join worship, prayer, and fellowship in whatever way feels comfortable",
       "Thursday evenings may be the best opportunity to ask questions",
       "Find teaching and discussion related to your needs or interests",
     ],
@@ -47,8 +47,8 @@ const connectionPaths = [
 
 const fellowshipMoments = [
   {
-    title: "Thursday discussion",
-    text: "Thursday evenings may be an especially helpful place for conversation, teaching, discussion, and honest questions.",
+    title: "Thursday discussion group",
+    text: "Thursday evenings from 7:00–8:00 PM may be an especially helpful place for conversation, teaching, discussion, and honest questions.",
   },
   {
     title: "Monthly fellowship meals",
@@ -66,7 +66,7 @@ const fellowshipMoments = [
 
 export default function ConnectPage() {
   return (
-    <main className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
+    <div className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
       <section className="border-b border-[#d9d2c3] bg-gradient-to-b from-[#f7f3eb] to-[#faf7f2]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
@@ -87,15 +87,20 @@ export default function ConnectPage() {
             looking for a church home, there is a place for you here.
           </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             <InfoCard
-              title="Sunday Worship"
-              value="10:30 AM"
-              text="A welcoming time of worship and God’s Word."
+              title="Sunday Main Service"
+              value="10:45 AM"
+              text="Worship & the Word."
+            />
+            <InfoCard
+              title="Optional Sunday"
+              value="10:00–10:30 AM"
+              text="Adult prayer meeting and children’s classes."
             />
             <InfoCard
               title="Thursday Evenings"
-              value="7:00 PM"
+              value="7:00–8:00 PM"
               text="A helpful setting for discussion, teaching, and questions."
             />
             <InfoCard
@@ -104,6 +109,11 @@ export default function ConnectPage() {
               text="A smaller church where people can truly know one another."
             />
           </div>
+
+          <p className="mt-5 max-w-3xl text-base leading-8 text-[#4b5563]">
+            From 10:30–10:45 AM on Sundays there is time to arrive, greet
+            people, and get settled before the main service begins.
+          </p>
         </div>
       </section>
 
@@ -210,13 +220,18 @@ export default function ConnectPage() {
             </p>
 
             <h2 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-              Start with a Sunday visit or a Thursday conversation
+              Start with Sunday Worship & the Word at 10:45 AM or a Thursday conversation
             </h2>
 
             <div className="mt-5 max-w-3xl space-y-5 text-base leading-8 text-[#4b5563]">
               <p>
-                If you are wondering where to begin, a Sunday service is a
-                simple first step.
+                If you are wondering where to begin, Sunday at 10:45 AM is a
+                simple first step for the main service.
+              </p>
+
+              <p>
+                If you would like to come a little earlier, 10:30–10:45 AM is a
+                relaxed time to arrive and get settled.
               </p>
 
               <p>
@@ -243,7 +258,7 @@ export default function ConnectPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

@@ -5,12 +5,12 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Plan Your Visit",
   description:
-    "Plan your first visit to Meadowbrook Christian Church in Maryville, Tennessee. Get Sunday worship time, address, directions, and a simple overview of what to expect.",
+    "Plan your first visit to Meadowbrook Christian Church in Maryville, Tennessee. Get Sunday Worship & the Word time, optional Sunday morning activities, directions, and a simple overview of what to expect.",
 };
 
 export default function VisitPage() {
   return (
-    <main className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
+    <div className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
       <section className="border-b border-[#d9d2c3] bg-gradient-to-b from-[#f7f3eb] via-[#faf7f2] to-white">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
@@ -35,15 +35,35 @@ export default function VisitPage() {
                 limits on God&apos;s love.
               </p>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <InfoCard title="Sunday Worship" value="10:30 AM" />
-                <InfoCard title="Thursday" value="7:00 PM" sub="Small group" />
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <InfoCard
+                  title="Sunday Main Service"
+                  value="10:45 AM"
+                  sub="Worship & the Word"
+                />
+                <InfoCard
+                  title="Optional Sunday"
+                  value="10:00–10:30 AM"
+                  sub="Adult prayer meeting and children&apos;s classes"
+                />
+                <InfoCard
+                  title="Thursday"
+                  value="7:00–8:00 PM"
+                  sub="Discussion group"
+                />
                 <InfoCard
                   title="Address"
                   value="2332 Grove St"
                   sub="Maryville, TN 37804"
                 />
               </div>
+
+              <p className="mt-5 text-base leading-8 text-[#4b5563]">
+                From 10:30–10:45 AM there is time to arrive, meet people, and
+                get settled before the main service begins, so first-time
+                visitors are welcome to come right at 10:45 AM if that is
+                easiest.
+              </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
@@ -96,6 +116,12 @@ export default function VisitPage() {
 
           <div className="mt-10 rounded-[28px] border border-[#d9d2c3] bg-white p-6 shadow-sm md:p-8">
             <div className="grid gap-6 md:grid-cols-2">
+              <SimpleCard title="When should I come?">
+                You are welcome to come at 10:45 AM for the main service. If
+                you would rather arrive a little earlier, 10:30–10:45 AM is a
+                relaxed time to meet people and get settled.
+              </SimpleCard>
+
               <SimpleCard title="What should I wear?">
                 Wear what makes you comfortable. There are no special clothes to
                 wear.
@@ -107,13 +133,8 @@ export default function VisitPage() {
               </SimpleCard>
 
               <SimpleCard title="Bringing children?">
-                Children are welcome, and Meadowbrook is continuing to grow in
-                this area.
-              </SimpleCard>
-
-              <SimpleCard title="Want to reach out first?">
-                You can call (657) 347-2208 or use the Contact page before your
-                visit.
+                Children are welcome, and there are children&apos;s classes from
+                10:00–10:30 AM on Sunday mornings.
               </SimpleCard>
             </div>
           </div>
@@ -134,10 +155,28 @@ export default function VisitPage() {
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
-                      Sunday
+                      Sunday Main Service
                     </p>
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
-                      Worship at 10:30 AM
+                      Worship &amp; the Word at 10:45 AM
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
+                      Optional Sunday Morning
+                    </p>
+                    <p className="mt-2 text-base leading-7 text-[#4b5563]">
+                      10:00–10:30 AM adult prayer meeting and children&apos;s classes
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
+                      Arrival & Fellowship
+                    </p>
+                    <p className="mt-2 text-base leading-7 text-[#4b5563]">
+                      10:30–10:45 AM
                     </p>
                   </div>
 
@@ -146,7 +185,7 @@ export default function VisitPage() {
                       Thursday
                     </p>
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
-                      Small group at 7:00 PM
+                      Discussion group from 7:00–8:00 PM
                     </p>
                   </div>
 
@@ -155,7 +194,7 @@ export default function VisitPage() {
                       Fellowship Meal
                     </p>
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
-                      Normally the first Sunday of the month
+                      Usually the first Sunday of the month
                     </p>
                   </div>
 
@@ -194,8 +233,8 @@ export default function VisitPage() {
                 </p>
 
                 <p className="mt-4 text-base leading-8 text-[#4b5563]">
-                  We gather to honor God, strengthen one another, and
-                  make disciples.
+                  We gather to honor God, strengthen one another, and make
+                  disciples.
                 </p>
               </div>
             </div>
@@ -296,7 +335,7 @@ export default function VisitPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

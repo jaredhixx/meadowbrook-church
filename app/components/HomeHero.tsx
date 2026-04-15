@@ -46,14 +46,14 @@ export default function HomeHero() {
           willChange: "transform",
         }}
       >
-<Image
-  src="/images/MeadowbrookFeaturedHero.png"
-  alt="Meadowbrook Christian Church building in Maryville, Tennessee"
-  fill
-  priority
-  quality={100}
-  className="object-cover object-center contrast-[1.05] saturate-[1.05]"
-/>
+        <Image
+          src="/images/MeadowbrookFeaturedHero.png"
+          alt="Meadowbrook Christian Church building in Maryville, Tennessee"
+          fill
+          priority
+          quality={100}
+          className="object-cover object-center contrast-[1.05] saturate-[1.05]"
+        />
       </div>
 
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.72),rgba(15,23,42,0.50),rgba(15,23,42,0.26))]" />
@@ -83,10 +83,13 @@ export default function HomeHero() {
           <div className="mt-6 grid max-w-2xl gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-white/20 bg-white/10 px-6 py-5 shadow-[0_12px_30px_rgba(15,23,42,0.18)] backdrop-blur-[2px]">
               <p className="text-[0.8rem] font-semibold uppercase tracking-[0.16em] text-[#dbe7d5]">
-                Sunday Service
+                Sunday Main Service
               </p>
               <p className="mt-3 text-[2rem] font-semibold tracking-tight text-white">
-                10:30 AM
+                10:45 AM
+              </p>
+              <p className="mt-2 text-sm leading-6 text-white/85">
+                Worship &amp; the Word
               </p>
             </div>
 
@@ -118,8 +121,8 @@ export default function HomeHero() {
             </div>
 
             <p className="mt-2 text-sm leading-7 text-white/90 md:text-[0.95rem]">
-              Visiting for the first time? You’ll feel comfortable from the
-              moment you arrive.
+              Visitors are welcome to come right at 10:45 AM for the main
+              service.
             </p>
           </div>
 
@@ -128,7 +131,16 @@ export default function HomeHero() {
               A Personal Church
             </p>
             <p className="mt-2 text-sm leading-7 text-[#f3f4f6] md:text-[0.95rem]">
-We are eager to meet you. At Meadowbrook we welcome everyone who is seeking a community of faith and a deeper relationship with God. There are no special clothes to wear, no insignificant people, no questions to avoid asking, and no limits on God’s love.
+              We are eager to meet you. At Meadowbrook we welcome everyone who
+              is seeking a community of faith and a deeper relationship with
+              God. There are no special clothes to wear, no insignificant
+              people, no questions to avoid asking, and no limits on God’s
+              love.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-white/85 md:text-[0.95rem]">
+              Optional Sunday morning activities begin at 10:00 AM, and
+              10:30–10:45 AM is a relaxed time to arrive, meet people, and get
+              settled before the main service.
             </p>
           </div>
         </div>

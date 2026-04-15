@@ -4,12 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Contact | Meadowbrook Christian Church",
   description:
-    "Contact Meadowbrook Christian Church in Maryville, Tennessee. Find our phone number, email, address, Sunday service time, and simple ways to ask questions or plan your visit.",
+    "Contact Meadowbrook Christian Church in Maryville, Tennessee. Find our phone number, email, address, Sunday main service time, and simple ways to ask questions or plan your visit.",
 };
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
+    <div className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
       <section className="border-b border-[#d9d2c3] bg-gradient-to-b from-[#f7f3eb] to-[#faf7f2]">
         <div className="mx-auto max-w-5xl px-6 pt-12 pb-16 md:px-10 md:pt-14 md:pb-20">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
@@ -61,10 +61,10 @@ export default function ContactPage() {
 
             <div className="rounded-2xl border border-[#d9d2c3] bg-white p-6 shadow-sm">
               <p className="text-sm font-semibold uppercase tracking-wide text-[#6b7280]">
-                Sunday Service
+                Sunday Main Service
               </p>
               <p className="mt-2 text-xl font-semibold text-[#1f2937]">
-                10:30 AM
+                10:45 AM
               </p>
             </div>
           </div>
@@ -137,9 +137,10 @@ export default function ContactPage() {
                   First-time visitor questions
                 </h3>
                 <p className="mt-3 text-base leading-7 text-[#4b5563]">
-                  If you are wondering what to expect on your first Sunday, what
-                  to wear, or whether your family will feel comfortable, we
-                  would be happy to help.
+                  Visitors are welcome to come at 10:45 AM for the main service.
+                  If arriving a little earlier feels better, 10:30–10:45 AM is
+                  a relaxed time to get settled before Worship &amp; the Word
+                  begins.
                 </p>
               </div>
             </div>
@@ -165,8 +166,10 @@ export default function ContactPage() {
                 <p>2332 Grove St, Maryville, TN 37804</p>
                 <p>(657) 347-2208</p>
                 <p>2meadowbrookcc@gmail.com</p>
-                <p>Sunday at 10:30 AM</p>
-                <p>Thursday small group at 7:00 PM</p>
+                <p>Sunday Worship &amp; the Word at 10:45 AM</p>
+                <p>Optional 10:00–10:30 AM adult prayer meeting and children&apos;s classes</p>
+                <p>10:30–10:45 AM arrival and fellowship</p>
+                <p>Thursday discussion group at 7:00–8:00 PM</p>
               </div>
 
               <div className="mt-6 flex flex-col gap-4 sm:flex-row">
@@ -237,6 +240,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

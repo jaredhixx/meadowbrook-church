@@ -8,10 +8,24 @@ export const metadata: Metadata = {
     "Learn about Meadowbrook Christian Church in Maryville, Tennessee, including our mission, history, and commitment to Scripture.",
 };
 
+type SectionHeaderProps = {
+  eyebrow: string;
+  title: string;
+  text: string;
+};
+
+type InfoCardProps = {
+  title: string;
+  value: string;
+};
+
+type IdentityItemProps = {
+  text: string;
+};
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
-      {/* HERO */}
+    <div className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
       <section className="border-b border-[#d9d2c3] bg-gradient-to-b from-[#f7f3eb] to-[#faf7f2]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
@@ -42,7 +56,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* IDENTITY */}
       <section className="border-b border-[#d9d2c3] bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
@@ -66,7 +79,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* PASTOR */}
       <section className="border-b border-[#d9d2c3] bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
@@ -79,14 +91,15 @@ export default function AboutPage() {
 
               <div className="mt-6 space-y-4 text-base leading-7 text-[#4b5563]">
                 <p>
-                  Matt served as a missionary in China from 1992-2001 and
-                  2017-2019, helping establish churches and Bible studies.
+                  Matt served as a missionary in China from 1992 to 2001 and
+                  again from 2017 to 2019, helping establish churches and Bible
+                  studies.
                 </p>
 
                 <p>
-                  He was a professor at Johnson University from 2003-2017 and
-                  later worked in curriculum development, local ministry, and
-                  Knox County Schools.
+                  He was a professor at Johnson University from 2003 to 2017
+                  and later worked in curriculum development, local ministry,
+                  and Knox County Schools.
                 </p>
 
                 <p>
@@ -119,7 +132,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* MISSION */}
       <section className="border-b border-[#d9d2c3] bg-[#faf7f2]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
@@ -154,7 +166,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section>
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
           <div className="rounded-[28px] border border-[#d9d2c3] bg-white p-8 shadow-sm md:p-10">
@@ -182,11 +193,11 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 
-function SectionHeader({ eyebrow, title, text }: any) {
+function SectionHeader({ eyebrow, title, text }: SectionHeaderProps) {
   return (
     <div className="max-w-3xl">
       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
@@ -200,7 +211,7 @@ function SectionHeader({ eyebrow, title, text }: any) {
   );
 }
 
-function InfoCard({ title, value }: any) {
+function InfoCard({ title, value }: InfoCardProps) {
   return (
     <div className="rounded-2xl border border-[#d9d2c3] bg-white p-6 shadow-sm">
       <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#6b7280]">
@@ -213,7 +224,7 @@ function InfoCard({ title, value }: any) {
   );
 }
 
-function IdentityItem({ text }: any) {
+function IdentityItem({ text }: IdentityItemProps) {
   return (
     <div className="rounded-2xl border border-[#e2dccf] bg-white/85 px-4 py-4 shadow-sm">
       <p className="text-base leading-7 text-[#374151]">{text}</p>

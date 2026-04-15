@@ -30,21 +30,21 @@ export default function SiteHeader() {
             aria-label="Meadowbrook Christian Church home"
           >
             <div className="flex flex-col">
-<div className="flex items-center gap-2">
-  <svg
-    className="h-[14px] w-[14px] text-[#9b8f7a]"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    aria-hidden="true"
-  >
-    <rect x="10.5" y="3" width="3" height="18" rx="1.2" />
-    <rect x="6" y="10.5" width="12" height="3" rx="1.2" />
-  </svg>
+              <div className="flex items-center gap-2">
+                <svg
+                  className="h-[14px] w-[14px] text-[#9b8f7a]"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <rect x="10.5" y="3" width="3" height="18" rx="1.2" />
+                  <rect x="6" y="10.5" width="12" height="3" rx="1.2" />
+                </svg>
 
-  <span className="text-[0.66rem] font-semibold uppercase tracking-[0.28em] text-[#867b6c]">
-    Meadowbrook
-  </span>
-</div>
+                <span className="text-[0.66rem] font-semibold uppercase tracking-[0.28em] text-[#867b6c]">
+                  Meadowbrook
+                </span>
+              </div>
 
               <span className="mt-0.5 text-[1.18rem] font-semibold leading-none tracking-[-0.03em] text-[#1f2937] md:text-[1.3rem]">
                 Christian Church
@@ -54,7 +54,7 @@ export default function SiteHeader() {
                 <span className="text-[#6b7280]">Maryville, Tennessee</span>
                 <span className="hidden h-1 w-1 rounded-full bg-[#b9a789] sm:inline-block" />
                 <span className="font-semibold text-[#5c7354]">
-                  Sunday at 10:30 AM
+                  Sunday 10:45 AM
                 </span>
               </div>
 
@@ -110,7 +110,7 @@ export default function SiteHeader() {
                   <div className="mt-2 space-y-1 text-xs">
                     <p className="text-[#6b7280]">Maryville, Tennessee</p>
                     <p className="font-semibold text-[#5c7354]">
-                      Sunday at 10:30 AM
+                      Sunday 10:45 AM
                     </p>
                   </div>
                 </div>

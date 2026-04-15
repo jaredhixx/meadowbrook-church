@@ -2,18 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Give",
+  title: "Give | Meadowbrook Christian Church",
   description:
-    "Learn about giving to Meadowbrook Christian Church in Maryville, TN and how your support helps the church serve its community.",
+    "Learn about giving to Meadowbrook Christian Church in Maryville, Tennessee and simple ways to support the church’s ministry.",
 };
 
 export default function GivePage() {
   return (
-    <main className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
+    <div className="min-h-screen bg-[#faf7f2] text-[#1f2937]">
       <section className="border-b border-[#d9d2c3] bg-gradient-to-b from-[#f7f3eb] to-[#faf7f2]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-20">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
             Give
+          </p>
+
+          <p className="mt-4 font-serif text-2xl italic text-[#5c7354] md:text-3xl">
+            Passion for God, a Heart for People.
           </p>
 
           <h1 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-[#1f2937] md:text-5xl">
@@ -80,21 +84,34 @@ export default function GivePage() {
                 </p>
 
                 <h2 className="mt-3 text-2xl font-bold tracking-tight text-[#1f2937] md:text-3xl">
-                  Need giving details?
+                  Simple ways to ask about giving
                 </h2>
 
                 <p className="mt-5 text-base leading-8 text-[#4b5563]">
-                  For now, please contact Meadowbrook Christian Church directly
-                  for current giving information and options.
+                  Meadowbrook is preparing to offer clearer online giving
+                  options in the future. For now, please contact the church
+                  directly for current giving information and the best way to
+                  support the ministry.
                 </p>
 
-                <div className="mt-8 rounded-2xl border border-[#d9d2c3] bg-[#f7f3eb] p-6">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-[#6b7280]">
-                    Church Phone
-                  </p>
-                  <p className="mt-2 text-xl font-semibold text-[#1f2937]">
-                    (657) 347-2208
-                  </p>
+                <div className="mt-8 space-y-4 rounded-2xl border border-[#d9d2c3] bg-[#f7f3eb] p-6">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-[#6b7280]">
+                      Church Phone
+                    </p>
+                    <p className="mt-2 text-xl font-semibold text-[#1f2937]">
+                      (657) 347-2208
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-wide text-[#6b7280]">
+                      Church Email
+                    </p>
+                    <p className="mt-2 break-all text-lg font-semibold text-[#1f2937]">
+                      2meadowbrookcc@gmail.com
+                    </p>
+                  </div>
                 </div>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -122,7 +139,13 @@ export default function GivePage() {
                   2332 Grove St, Maryville, TN 37804
                 </p>
                 <p className="mt-1 text-base leading-7 text-[#4b5563]">
-                  Sunday Service at 10:30 AM
+                  Sunday Main Service at 10:45 AM
+                </p>
+                <p className="mt-1 text-base leading-7 text-[#4b5563]">
+                  Optional 10:00–10:30 AM adult prayer meeting and children&apos;s classes
+                </p>
+                <p className="mt-1 text-base leading-7 text-[#4b5563]">
+                  Thursday discussion group at 7:00–8:00 PM
                 </p>
               </div>
             </div>
@@ -149,6 +172,6 @@ export default function GivePage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
