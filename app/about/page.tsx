@@ -51,7 +51,7 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
             <InfoCard title="Church Type" value="Independent Christian church" />
             <InfoCard title="Location" value="Maryville, TN" />
-            <InfoCard title="Sunday Service" value="10:30 AM" />
+            <InfoCard title="Sunday Service" value="10:45 AM" />
           </div>
         </div>
       </section>

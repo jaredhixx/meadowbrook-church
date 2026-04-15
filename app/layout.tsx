@@ -131,7 +131,7 @@ export default function RootLayout({
                   <p className="font-semibold text-[#1f2937]">
                     Optional Sunday Morning
                   </p>
-                  <p>10:00–10:30 AM adult prayer meeting</p>
+                  <p>10:00– AM adult prayer meeting</p>
                   <p>10:00–10:30 AM children&apos;s classes</p>
                   <p>10:30–10:45 AM arrival and fellowship</p>
                 </div>
