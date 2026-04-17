@@ -3,9 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Connect | Meadowbrook Christian Church",
+  title: "Connect at Meadowbrook in Maryville TN",
   description:
     "Learn how to connect at Meadowbrook Christian Church in Maryville, Tennessee. Find opportunities for families, starters, believers, and church fellowship.",
+  alternates: {
+    canonical: "/connect",
+  },
 };
 
 const connectionPaths = [

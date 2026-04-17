@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact | Meadowbrook Christian Church",
+  title: "Contact a Christian Church in Maryville TN",
   description:
     "Contact Meadowbrook Christian Church in Maryville, Tennessee. Find our phone number, email, address, Sunday main service time, and simple ways to ask questions or plan your visit.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

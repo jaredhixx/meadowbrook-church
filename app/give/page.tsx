@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Give | Meadowbrook Christian Church",
+  title: "Give to Meadowbrook in Maryville TN",
   description:
     "Learn about giving to Meadowbrook Christian Church in Maryville, Tennessee and simple ways to support the church’s ministry.",
+  alternates: {
+    canonical: "/give",
+  },
 };
 
 export default function GivePage() {

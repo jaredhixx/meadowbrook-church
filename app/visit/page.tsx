@@ -3,9 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Plan Your Visit",
+  title: "Plan Your Visit to a Christian Church in Maryville TN",
   description:
     "Plan your first visit to Meadowbrook Christian Church in Maryville, Tennessee. Get Sunday Worship & the Word time, optional Sunday morning activities, directions, and a simple overview of what to expect.",
+  alternates: {
+    canonical: "/visit",
+  },
 };
 
 export default function VisitPage() {

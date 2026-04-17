@@ -3,9 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Us | Meadowbrook Christian Church",
+  title: "About Us in Maryville TN",
   description:
     "Learn about Meadowbrook Christian Church in Maryville, Tennessee, including our mission, history, and commitment to Scripture.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 type SectionHeaderProps = {

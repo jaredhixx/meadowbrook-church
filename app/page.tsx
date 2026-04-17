@@ -5,9 +5,12 @@ import HomeHero from "./components/HomeHero";
 import PhotoCarousel from "./components/PhotoCarousel";
 
 export const metadata: Metadata = {
-  title: "Meadowbrook Christian Church | Church in Maryville TN Near Alcoa",
+  title: "Christian Church in Maryville TN Near Alcoa",
   description:
     "Meadowbrook Christian Church is a small, welcoming church in Maryville TN near Alcoa. Join us Sundays at 10:45 AM for Worship & the Word and discover a personal church community rooted in faith, fellowship, and God’s Word.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const newHereSlides = [

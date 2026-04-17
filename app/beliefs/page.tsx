@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Beliefs | Meadowbrook Christian Church",
+  title: "Our Beliefs in Maryville TN",
   description:
     "Learn about the beliefs, mission, and biblical foundation of Meadowbrook Christian Church in Maryville, Tennessee.",
+  alternates: {
+    canonical: "/beliefs",
+  },
 };
 
 const identityPoints = [

@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Leadership | Meadowbrook Christian Church",
+  title: "Church Leadership in Maryville TN",
   description:
     "Meet the leadership of Meadowbrook Christian Church in Maryville, Tennessee, including Pastor Matt Hixson and those serving the church family.",
+  alternates: {
+    canonical: "/leadership",
+  },
 };
 
 const featuredLeaders = [
