@@ -36,50 +36,54 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const churchSchema = {
-    "@context": "https://schema.org",
-    "@type": "Church",
-    name: "Meadowbrook Christian Church",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "2332 Grove St",
-      addressLocality: "Maryville",
-      addressRegion: "TN",
-      postalCode: "37804",
-      addressCountry: "US",
+  "@context": "https://schema.org",
+  "@type": "Church",
+  name: "Meadowbrook Christian Church",
+  image: "https://www.meadowbrookcc.org/images/Meadowbrooksign.jpg",
+  url: "https://www.meadowbrookcc.org",
+  telephone: "(657) 347-2208",
+  email: "2meadowbrookcc@gmail.com",
+
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2332 Grove St",
+    addressLocality: "Maryville",
+    addressRegion: "TN",
+    postalCode: "37804",
+    addressCountry: "US",
+  },
+
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 35.7565,
+    longitude: -83.9705,
+  },
+
+  areaServed: [
+    { "@type": "City", name: "Maryville" },
+    { "@type": "City", name: "Alcoa" },
+    { "@type": "AdministrativeArea", name: "Blount County" }
+  ],
+
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Sunday",
+      opens: "10:45",
+      closes: "12:00",
     },
-    telephone: "(657) 347-2208",
-    email: "2meadowbrookcc@gmail.com",
-    url: "https://www.meadowbrookcc.org",
-    areaServed: [
-      {
-        "@type": "City",
-        name: "Maryville",
-      },
-      {
-        "@type": "City",
-        name: "Alcoa",
-      },
-      {
-        "@type": "AdministrativeArea",
-        name: "Blount County",
-      },
-    ],
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Sunday",
-        opens: "10:45",
-        closes: "12:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Thursday",
-        opens: "19:00",
-        closes: "20:00",
-      },
-    ],
-    sameAs: ["https://www.facebook.com/MeadowbrookChristianChurch/"],
-  };
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Thursday",
+      opens: "19:00",
+      closes: "20:00",
+    }
+  ],
+
+  sameAs: [
+    "https://www.facebook.com/MeadowbrookChristianChurch/"
+  ]
+};
 
   return (
     <html
@@ -128,7 +132,7 @@ export default function RootLayout({
                   <p className="font-semibold text-[#1f2937]">
                     Optional Sunday Morning
                   </p>
-                  <p>10:00– AM adult prayer meeting</p>
+                  <p>10:00–10:30 AM adult prayer meeting</p>
                   <p>10:00–10:30 AM children&apos;s classes</p>
                   <p>10:30–10:45 AM arrival and fellowship</p>
                 </div>

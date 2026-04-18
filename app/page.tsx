@@ -168,7 +168,8 @@ export default function Home() {
                       Optional Sunday
                     </p>
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
-                      10:00–10:30 AM adult prayer meeting and children&apos;s classes
+                      10:00–10:30 AM adult prayer meeting and children&apos;s
+                      classes
                     </p>
                   </div>
 
@@ -250,9 +251,17 @@ export default function Home() {
                 </p>
 
                 <div className="mt-6 space-y-4 text-base text-[#4b5563]">
-                  <p>• Visitors are welcome to come at 10:45 AM for the main service</p>
-                  <p>• 10:30–10:45 AM is a relaxed time to arrive and get settled</p>
-                  <p>• Thursday evenings offer a helpful setting for questions and discussion</p>
+                  <p>
+                    • Visitors are welcome to come at 10:45 AM for the main
+                    service
+                  </p>
+                  <p>
+                    • 10:30–10:45 AM is a relaxed time to arrive and get settled
+                  </p>
+                  <p>
+                    • Thursday evenings offer a helpful setting for questions
+                    and discussion
+                  </p>
                 </div>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -260,7 +269,7 @@ export default function Home() {
                     href="/visit"
                     className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#4f6448]"
                   >
-                    Plan Your Visit
+                    Visit Our Church in Maryville TN
                   </Link>
 
                   <Link
@@ -302,8 +311,14 @@ export default function Home() {
 
               <div className="mt-6 space-y-4 text-base text-[#4b5563]">
                 <p>• Children are welcome</p>
-                <p>• Shared meals and monthly potlucks help people know one another</p>
-                <p>• Thursday discussion group creates space for honest questions and conversation</p>
+                <p>
+                  • Shared meals and monthly potlucks help people know one
+                  another
+                </p>
+                <p>
+                  • Thursday discussion group creates space for honest questions
+                  and conversation
+                </p>
               </div>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -325,6 +340,113 @@ export default function Home() {
 
             <div>
               <PhotoCarousel slides={churchLifeSlides} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-[#d9d2c3] bg-[#f7f3eb]">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-18">
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
+                Watch Meadowbrook
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
+                Hear Pastor Matt before you visit
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-[#4b5563]">
+                If you are exploring Christianity, looking for a church home, or
+                simply want to get a feel for Meadowbrook before visiting in
+                person, our videos are a great place to start.
+              </p>
+
+              <div className="mt-6 space-y-4 text-base leading-7 text-[#4b5563]">
+                <p>
+                  You can watch sermons, doctrine teaching, and biblical
+                  reflections on important issues as our video library
+                  continues to grow.
+                </p>
+
+                <p>
+                  This gives first-time visitors a simple way to hear Pastor
+                  Matt’s teaching style and get more comfortable before walking
+                  through the door.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/videos"
+                  className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#4f6448]"
+                >
+                  View All Videos
+                </Link>
+
+                <Link
+                  href="/videos/sermons/old-testament-slavery"
+                  className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-3 text-base font-semibold text-[#1f2937] transition hover:bg-[#f6f1e7]"
+                >
+                  Watch Featured Sermon
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid gap-6">
+              <div className="overflow-hidden rounded-3xl border border-[#d9d2c3] bg-white shadow-sm">
+                <div className="border-b border-[#e7e0d3] bg-[#fcfaf5] px-6 py-4">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
+                    Featured Sermon
+                  </p>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold tracking-tight text-[#1f2937]">
+                    What Does the Old Testament Really Teach About Slavery?
+                  </h3>
+
+                  <p className="mt-4 text-base leading-8 text-[#4b5563]">
+                    Watch Pastor Matt Hixson walk through one of the most
+                    difficult questions many people have when reading the Bible,
+                    and how Christians should think carefully and biblically
+                    about it.
+                  </p>
+
+                  <div className="mt-6">
+                    <Link
+                      href="/videos/sermons/old-testament-slavery"
+                      className="inline-flex items-center font-semibold text-[#5c7354] transition hover:text-[#4f6448]"
+                    >
+                      Watch this sermon
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-3xl border border-[#d9d2c3] bg-white shadow-sm">
+                <div className="p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
+                    Video Library
+                  </p>
+
+                  <p className="mt-3 text-base leading-8 text-[#4b5563]">
+                    Browse the growing Meadowbrook video library for sermons,
+                    Bible teaching, and future videos on doctrine and social
+                    issues.
+                  </p>
+
+                  <div className="mt-6">
+                    <Link
+                      href="/videos"
+                      className="inline-flex items-center font-semibold text-[#5c7354] transition hover:text-[#4f6448]"
+                    >
+                      Explore videos
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
