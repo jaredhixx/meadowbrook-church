@@ -264,21 +264,35 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                  <Link
-                    href="/visit"
-                    className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#4f6448]"
-                  >
-                    Visit Our Church in Maryville TN
-                  </Link>
+<div className="mt-8 flex flex-col gap-4 sm:flex-row">
+  <Link
+    href="/visit"
+    className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#4f6448]"
+  >
+    Visit Our Church in Maryville TN
+  </Link>
 
-                  <Link
-                    href="/connect"
-                    className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-3 text-base font-semibold text-[#1f2937] transition hover:bg-[#f6f1e7]"
-                  >
-                    Explore Connect
-                  </Link>
-                </div>
+  <Link
+    href="/connect"
+    className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-3 text-base font-semibold text-[#1f2937] transition hover:bg-[#f6f1e7]"
+  >
+    Explore Connect
+  </Link>
+
+  <Link
+    href="/kids"
+    className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-3 text-base font-semibold text-[#1f2937] transition hover:bg-[#f6f1e7]"
+  >
+    Kids & Families
+  </Link>
+
+  <Link
+    href="/groups"
+    className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-3 text-base font-semibold text-[#1f2937] transition hover:bg-[#f6f1e7]"
+  >
+    Bible Study & Groups
+  </Link>
+</div>
               </div>
 
               <div>

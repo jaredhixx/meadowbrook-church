@@ -23,6 +23,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://www.meadowbrookcc.org/kids",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://www.meadowbrookcc.org/groups",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: "https://www.meadowbrookcc.org/leadership",
       lastModified,
       changeFrequency: "monthly",

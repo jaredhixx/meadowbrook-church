@@ -67,24 +67,6 @@ export default function VisitPage() {
                 visitors are welcome to come right at 10:45 AM if that is
                 easiest.
               </p>
-
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="https://maps.google.com/?q=2332+Grove+St+Maryville+TN+37804"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-6 py-3 text-base font-semibold text-white shadow-[0_14px_30px_rgba(31,41,55,0.10)] transition hover:-translate-y-[1px] hover:bg-[#4f6448]"
-                >
-                  Get Directions
-                </a>
-
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-3 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
-                >
-                  Ask a Question
-                </Link>
-              </div>
             </div>
 
             <div className="lg:flex lg:justify-center">
@@ -111,11 +93,47 @@ export default function VisitPage() {
                       allowFullScreen
                       title="Welcome video from Meadowbrook Christian Church"
                     />
-                  </div>
                 </div>
               </div>
+
+<div className="border-t border-[#e7e0d3] bg-white px-4 py-5 sm:px-5">
+  <div className="flex flex-col gap-3">
+    <a
+      href="https://maps.google.com/?q=2332+Grove+St+Maryville+TN+37804"
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-6 py-4 text-base font-semibold text-white shadow-[0_14px_30px_rgba(31,41,55,0.10)] transition hover:-translate-y-[1px] hover:bg-[#4f6448]"
+    >
+      Get Directions
+    </a>
+
+    <Link
+      href="/kids"
+      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
+    >
+      Kids & Families
+    </Link>
+
+    <Link
+      href="/groups"
+      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
+    >
+      Bible Study & Groups
+    </Link>
+
+    <Link
+      href="/contact"
+      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
+    >
+      Ask a Question
+    </Link>
+  </div>
+</div>
             </div>
           </div>
+          </div>
+
+          
 
           <div className="mt-10 rounded-[28px] border border-[#d9d2c3] bg-white p-6 shadow-sm md:p-8">
             <div className="grid gap-6 md:grid-cols-2">
