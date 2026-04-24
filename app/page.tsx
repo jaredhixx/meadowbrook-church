@@ -404,7 +404,7 @@ export default function Home() {
 
                 <div className="p-6">
                   <h3 className="text-2xl font-bold tracking-tight text-[#1f2937]">
-                    What Does the Old Testament Really Teach About Slavery?
+                    What Does the Old Testament Say About Slavery?
                   </h3>
 
                   <p className="mt-4 text-base leading-8 text-[#4b5563]">

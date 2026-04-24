@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const sermons = [
   {
-    title: "What Does the Old Testament Really Teach About Slavery?",
+    title: "What Does the Old Testament Say About Slavery?",
     description:
       "Watch Pastor Matt Hixson teach through one of the most difficult questions many people have when reading the Bible and how Christians should think carefully and biblically about it.",
     href: "/videos/sermons/old-testament-slavery",
