@@ -13,7 +13,7 @@ const navLinks = [
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[linear-gradient(to_bottom,rgba(248,244,237,0.72),rgba(244,239,230,0.60))] backdrop-blur-[20px]">
+    <header className="sticky top-0 z-50 border-b border-[#ded4c4] bg-[linear-gradient(to_bottom,rgba(248,244,237,0.98),rgba(244,239,230,0.96))] shadow-[0_10px_30px_rgba(31,41,55,0.08)]">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.22),rgba(255,255,255,0.06)_42%,transparent)]" />
         <div className="absolute left-0 right-0 top-0 h-px bg-white/50" />

@@ -120,7 +120,24 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(churchSchema) }}
       />
 
-      <HomeHero />
+<Link
+  href="/vbs"
+  className="block overflow-hidden border-b border-[#4f6448] bg-[#5c7354] text-white transition hover:bg-[#4f6448]"
+>
+  <div className="vbs-marquee-track py-2 text-sm font-medium">
+    <span className="mx-8 inline-block font-semibold tracking-wide">
+      TREASURE SEEKERS VBS • June 3–5 • 6–8 PM • Supper Provided • Preschool–High School • Call 865-206-6661 to RSVP • Click HERE to learn more
+    </span>
+    <span className="mx-8 inline-block font-semibold tracking-wide">
+      TREASURE SEEKERS VBS • June 3–5 • 6–8 PM • Supper Provided • Preschool–High School • Call 865-206-6661 to RSVP • Click HERE to learn more
+    </span>
+    <span className="mx-8 inline-block font-semibold tracking-wide">
+      TREASURE SEEKERS VBS • June 3–5 • 6–8 PM • Supper Provided • Preschool–High School • Call 865-206-6661 to RSVP • Click HERE to learn more
+    </span>
+  </div>
+</Link>
+
+<HomeHero />
 
       <section className="relative -mt-12 border-b border-[#d9d2c3] bg-[#f2ede3] pt-6">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#e7e0d3] to-transparent" />
