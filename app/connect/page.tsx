@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Connect at Meadowbrook in Maryville TN",
   description:
-    "Learn how to connect at Meadowbrook Christian Church in Maryville, Tennessee. Find opportunities for families, starters, believers, and church fellowship.",
+    "Learn how to connect at Meadowbrook Christian Church in Maryville, Tennessee. Find opportunities for families, children, starters, believers, and church fellowship.",
   alternates: {
     canonical: "/connect",
   },
@@ -17,11 +17,11 @@ const connectionPaths = [
     title: "Families are welcome at Meadowbrook",
     text: "Our church is blessed with some wonderful, joyful children. Our youth workers are kind and love to mentor these beautiful young souls.",
     points: [
+      "Waymaker’s Kids on Tuesdays from 3:30–5:30 PM",
       "Children’s classes on Sunday from 10:00–10:30 AM",
       "Potluck meals",
       "Parent’s Night Out",
-      "Game nights",
-      "Vacation Bible School",
+      "Game nights and family events",
     ],
   },
   {
@@ -50,6 +50,10 @@ const connectionPaths = [
 
 const fellowshipMoments = [
   {
+    title: "Waymaker’s Kids",
+    text: "Every Tuesday from 3:30–5:30 PM, children can join us for homework help, a snack, fun, and games in partnership with Maryville International Connection.",
+  },
+  {
     title: "Thursday discussion group",
     text: "Thursday evenings from 7:00–8:00 PM may be an especially helpful place for conversation, teaching, discussion, and honest questions.",
   },
@@ -60,10 +64,6 @@ const fellowshipMoments = [
   {
     title: "Game nights and family events",
     text: "Simple events create natural ways for children, families, and visitors to begin getting to know people at Meadowbrook.",
-  },
-  {
-    title: "Vacation Bible School",
-    text: "Seasonal events like VBS show Meadowbrook’s desire to serve children and families well.",
   },
 ];
 
@@ -102,14 +102,14 @@ export default function ConnectPage() {
               text="Adult prayer meeting and children’s classes."
             />
             <InfoCard
+              title="Waymaker’s Kids"
+              value="Tuesdays"
+              text="3:30–5:30 PM for homework help, snack, fun, and games."
+            />
+            <InfoCard
               title="Thursday Evenings"
               value="7:00–8:00 PM"
               text="A helpful setting for discussion, teaching, and questions."
-            />
-            <InfoCard
-              title="Church Life"
-              value="Personal and relational"
-              text="A smaller church where people can truly know one another."
             />
           </div>
 
@@ -160,6 +160,17 @@ export default function ConnectPage() {
                     </div>
                   ))}
                 </div>
+
+                {path.eyebrow === "For Families with Children" && (
+                  <div className="mt-6">
+                    <Link
+                      href="/kids#waymakers-kids"
+                      className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:-translate-y-[1px] hover:bg-[#4f6448]"
+                    >
+                      Learn About Waymaker&apos;s Kids
+                    </Link>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -208,6 +219,17 @@ export default function ConnectPage() {
                   <p className="mt-3 text-base leading-7 text-[#4b5563]">
                     {item.text}
                   </p>
+
+                  {item.title === "Waymaker’s Kids" && (
+                    <div className="mt-5">
+                      <Link
+                        href="/kids#waymakers-kids"
+                        className="font-semibold text-[#5c7354] transition hover:text-[#4f6448]"
+                      >
+                        View Waymaker&apos;s Kids details →
+                      </Link>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -223,7 +245,8 @@ export default function ConnectPage() {
             </p>
 
             <h2 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-              Start with Sunday Worship & the Word at 10:45 AM or a Thursday conversation
+              Start with Sunday Worship & the Word at 10:45 AM or a Thursday
+              conversation
             </h2>
 
             <div className="mt-5 max-w-3xl space-y-5 text-base leading-8 text-[#4b5563]">
@@ -238,8 +261,9 @@ export default function ConnectPage() {
               </p>
 
               <p>
-                If you are carrying questions or would like a more conversational
-                setting, Thursday evening may be especially helpful.
+                If you are carrying questions or would like a more
+                conversational setting, Thursday evening may be especially
+                helpful.
               </p>
             </div>
 

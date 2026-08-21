@@ -44,16 +44,19 @@ export default function VisitPage() {
                   value="10:45 AM"
                   sub="Worship & the Word"
                 />
+
                 <InfoCard
                   title="Optional Sunday"
                   value="10:00–10:30 AM"
                   sub="Adult prayer meeting and children&apos;s classes"
                 />
+
                 <InfoCard
                   title="Thursday"
                   value="7:00–8:00 PM"
                   sub="Discussion group"
                 />
+
                 <InfoCard
                   title="Address"
                   value="2332 Grove St"
@@ -93,47 +96,45 @@ export default function VisitPage() {
                       allowFullScreen
                       title="Welcome video from Meadowbrook Christian Church"
                     />
+                  </div>
+                </div>
+
+                <div className="border-t border-[#e7e0d3] bg-white px-4 py-5 sm:px-5">
+                  <div className="flex flex-col gap-3">
+                    <a
+                      href="https://maps.google.com/?q=2332+Grove+St+Maryville+TN+37804"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-6 py-4 text-base font-semibold text-white shadow-[0_14px_30px_rgba(31,41,55,0.10)] transition hover:-translate-y-[1px] hover:bg-[#4f6448]"
+                    >
+                      Get Directions
+                    </a>
+
+                    <Link
+                      href="/kids"
+                      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
+                    >
+                      Kids & Families
+                    </Link>
+
+                    <Link
+                      href="/groups"
+                      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
+                    >
+                      Bible Study & Groups
+                    </Link>
+
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
+                    >
+                      Ask a Question
+                    </Link>
+                  </div>
                 </div>
               </div>
-
-<div className="border-t border-[#e7e0d3] bg-white px-4 py-5 sm:px-5">
-  <div className="flex flex-col gap-3">
-    <a
-      href="https://maps.google.com/?q=2332+Grove+St+Maryville+TN+37804"
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center justify-center rounded-xl bg-[#5c7354] px-6 py-4 text-base font-semibold text-white shadow-[0_14px_30px_rgba(31,41,55,0.10)] transition hover:-translate-y-[1px] hover:bg-[#4f6448]"
-    >
-      Get Directions
-    </a>
-
-    <Link
-      href="/kids"
-      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
-    >
-      Kids & Families
-    </Link>
-
-    <Link
-      href="/groups"
-      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
-    >
-      Bible Study & Groups
-    </Link>
-
-    <Link
-      href="/contact"
-      className="inline-flex items-center justify-center rounded-xl border border-[#bdaa86] bg-white px-6 py-4 text-base font-semibold text-[#1f2937] shadow-[0_12px_24px_rgba(31,41,55,0.06)] transition hover:-translate-y-[1px] hover:bg-[#f6f1e7]"
-    >
-      Ask a Question
-    </Link>
-  </div>
-</div>
             </div>
           </div>
-          </div>
-
-          
 
           <div className="mt-10 rounded-[28px] border border-[#d9d2c3] bg-white p-6 shadow-sm md:p-8">
             <div className="grid gap-6 md:grid-cols-2">
@@ -164,7 +165,7 @@ export default function VisitPage() {
 
       <section className="border-b border-[#d9d2c3] bg-[#f4efe6]">
         <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <SectionHeader
                 eyebrow="First Visit Basics"
@@ -178,6 +179,7 @@ export default function VisitPage() {
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
                       Sunday Main Service
                     </p>
+
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
                       Worship &amp; the Word at 10:45 AM
                     </p>
@@ -187,8 +189,10 @@ export default function VisitPage() {
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
                       Optional Sunday Morning
                     </p>
+
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
-                      10:00–10:30 AM adult prayer meeting and children&apos;s classes
+                      10:00–10:30 AM adult prayer meeting and children&apos;s
+                      classes
                     </p>
                   </div>
 
@@ -196,6 +200,7 @@ export default function VisitPage() {
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
                       Arrival & Fellowship
                     </p>
+
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
                       10:30–10:45 AM
                     </p>
@@ -205,6 +210,7 @@ export default function VisitPage() {
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
                       Thursday
                     </p>
+
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
                       Discussion group from 7:00–8:00 PM
                     </p>
@@ -214,6 +220,7 @@ export default function VisitPage() {
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
                       Fellowship Meal
                     </p>
+
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
                       Usually the first Sunday of the month
                     </p>
@@ -223,6 +230,7 @@ export default function VisitPage() {
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
                       Families
                     </p>
+
                     <p className="mt-2 text-base leading-7 text-[#4b5563]">
                       Children are welcome
                     </p>
@@ -232,31 +240,37 @@ export default function VisitPage() {
             </div>
 
             <div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <TrustImageCard
-                  src="/images/kids/kids-5.jpg"
-                  alt="Children at Meadowbrook Christian Church"
-                />
-                <TrustImageCard
-                  src="/images/community/families.jpg"
-                  alt="Families at Meadowbrook Christian Church"
-                />
-              </div>
+              <div className="overflow-hidden rounded-[2rem] border border-[#d9d2c3] bg-white shadow-[0_18px_44px_rgba(31,41,55,0.10)]">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src="/images/congregation1.jpg"
+                    alt="Members and families gathering inside Meadowbrook Christian Church in Maryville"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                    className="object-cover"
+                  />
+                </div>
 
-              <div className="mt-6 rounded-3xl border border-[#d9d2c3] bg-white p-6 shadow-sm">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#5c7354]">
-                  Families and Kids
-                </p>
+                <div className="border-t border-[#e7e0d3] bg-white p-6">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#5c7354]">
+                    A Real Sunday at Meadowbrook
+                  </p>
 
-                <p className="mt-3 text-base leading-8 text-[#4b5563]">
-                  Our church is blessed with some wonderful, joyful children.
-                  Families are welcome at Meadowbrook.
-                </p>
+                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#1f2937]">
+                    Come as you are and get to know people
+                  </h3>
 
-                <p className="mt-4 text-base leading-8 text-[#4b5563]">
-                  We gather to honor God, strengthen one another, and make
-                  disciples.
-                </p>
+                  <p className="mt-4 text-base leading-8 text-[#4b5563]">
+                    Meadowbrook is a smaller church where people have time to
+                    talk, families can feel known, and visitors do not have to
+                    disappear into a crowd.
+                  </p>
+
+                  <p className="mt-4 text-base leading-8 text-[#4b5563]">
+                    This is our actual church family gathering together at
+                    Meadowbrook.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -374,9 +388,11 @@ function SectionHeader({
       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#5c7354]">
         {eyebrow}
       </p>
+
       <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#1f2937] md:text-4xl">
         {title}
       </h2>
+
       <p className="mt-5 text-lg leading-8 text-[#4b5563]">{text}</p>
     </div>
   );
@@ -392,6 +408,7 @@ function SimpleCard({
   return (
     <div className="rounded-2xl border border-[#d9d2c3] bg-white p-6 shadow-sm">
       <h3 className="text-lg font-semibold text-[#1f2937]">{title}</h3>
+
       <p className="mt-3 text-sm leading-7 text-[#4b5563]">{children}</p>
     </div>
   );
@@ -411,26 +428,12 @@ function InfoCard({
       <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#6b7280]">
         {title}
       </p>
+
       <p className="mt-3 text-xl font-semibold tracking-tight text-[#1f2937]">
         {value}
       </p>
-      {sub && <p className="mt-1 text-sm leading-6 text-[#4b5563]">{sub}</p>}
-    </div>
-  );
-}
 
-function TrustImageCard({
-  src,
-  alt,
-}: {
-  src: string;
-  alt: string;
-}) {
-  return (
-    <div className="overflow-hidden rounded-[1.5rem] border border-[#d9d2c3] bg-white shadow-sm">
-      <div className="relative aspect-[4/3] w-full">
-        <Image src={src} alt={alt} fill className="object-cover" />
-      </div>
+      {sub && <p className="mt-1 text-sm leading-6 text-[#4b5563]">{sub}</p>}
     </div>
   );
 }

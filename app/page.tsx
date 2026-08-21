@@ -121,18 +121,18 @@ export default function Home() {
       />
 
 <Link
-  href="/vbs"
+  href="/kids"
   className="block overflow-hidden border-b border-[#4f6448] bg-[#5c7354] text-white transition hover:bg-[#4f6448]"
 >
   <div className="vbs-marquee-track py-2 text-sm font-medium">
     <span className="mx-8 inline-block font-semibold tracking-wide">
-      TREASURE SEEKERS VBS • June 3–5 • 6–8 PM • Supper Provided • Preschool–High School • Call 865-206-6661 to RSVP • Click HERE to learn more
+      WAYMAKER&apos;S KIDS • Tuesdays • 3:30–5:30 PM • Homework Help • Snack • Fun &amp; Games • Meadowbrook Christian Church • Click HERE to learn more
     </span>
     <span className="mx-8 inline-block font-semibold tracking-wide">
-      TREASURE SEEKERS VBS • June 3–5 • 6–8 PM • Supper Provided • Preschool–High School • Call 865-206-6661 to RSVP • Click HERE to learn more
+      WAYMAKER&apos;S KIDS • Tuesdays • 3:30–5:30 PM • Homework Help • Snack • Fun &amp; Games • Meadowbrook Christian Church • Click HERE to learn more
     </span>
     <span className="mx-8 inline-block font-semibold tracking-wide">
-      TREASURE SEEKERS VBS • June 3–5 • 6–8 PM • Supper Provided • Preschool–High School • Call 865-206-6661 to RSVP • Click HERE to learn more
+      WAYMAKER&apos;S KIDS • Tuesdays • 3:30–5:30 PM • Homework Help • Snack • Fun &amp; Games • Meadowbrook Christian Church • Click HERE to learn more
     </span>
   </div>
 </Link>
